@@ -33,6 +33,25 @@
             >
               手动生成模型
             </p>
+            <li class="meun-li" tabindex="0" @click="navActivee">
+              模型绘制2<i style="margin-left: 50%" :class="iconClasss"></i>
+            </li>
+            <p
+              class="nav-two"
+              tabindex="0"
+              v-if="navv"
+              @click="routerPush('1-3')"
+            >
+              自动生成模型
+            </p>
+            <p
+              class="nav-two"
+              tabindex="0"
+              v-if="navv"
+              @click="routerPush('1-4')"
+            >
+              手动生成模型
+            </p>
             <li class="meun-li" tabindex="0" @click="routerPush('2')">
               影响分析
             </li>
@@ -66,7 +85,9 @@ export default {
       router,
       routerTarget: "/view",
       nav: false,
+      navv: false,
       iconClass: "el-icon-arrow-down",
+      iconClasss: "el-icon-arrow-down",
     };
   },
   methods: {
@@ -79,11 +100,23 @@ export default {
         this.iconClass = "el-icon-arrow-down";
       }
     },
+    navActivee() {
+      this.navv = !this.navv;
+      if (this.navv) {
+        this.iconClasss = "el-icon-arrow-up";
+      } else {
+        this.iconClasss = "el-icon-arrow-down";
+      }
+    },
     routerPush(val) {
       if(val === '1-1') {
         this.routerTarget = "/oneone";
       } else if(val === '1-2') {
         this.routerTarget = "/onetwo";
+      }else if(val === '1-3') {
+        this.routerTarget = "/onethree";
+      }else if(val === '1-4') {
+        this.routerTarget = "/onefour";
       }else if (val === "2") {
         this.routerTarget = "/home";
       } else if (val === "3") {

@@ -9,7 +9,7 @@
       <div
         v-else
         class="left-top"
-        :style="{ background: 'url(' + qian + ')' }"
+        :style="{ background: 'url(' + hou + ')' }"
       ></div>
       <div class="left-bottom">
         <div style="padding: 8px; background-color: #d3cece; font-size: 12px">
@@ -60,12 +60,12 @@
 
 <script>
 import kong from "../image/kong.png";
-import qian from "../image/qian.png";
+import hou from "../image/hou.png";
 export default {
   data() {
     return {
       kong,
-      qian,
+      hou,
       imgShow: true,
       dialogVisible: true,
       formData: { name: "" },

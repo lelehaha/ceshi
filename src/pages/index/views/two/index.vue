@@ -28,12 +28,17 @@
       >（保留方括号，示例：['v'，5，9]）
       <el-form ref="form" :model="formData" label-width="80px">
         <el-form-item>
-          <el-table :data="tableData" style="width: 100%">
+          <el-table :data="tableData" style="width: 100%" height="250px">
             <el-table-column prop="obj" label="项目" width="400px">
             </el-table-column>
           </el-table>
         </el-form-item>
       </el-form>
+      <div style="width: 100%;margin-left: 150px;">
+        <el-button>从文件载入义务测试</el-button>
+        <el-button>添加测试义务</el-button>
+        <el-button>删除选中义务测试</el-button>
+      </div>
       <span slot="footer" class="dialog-footer">
         <el-button @click="visible = false">取 消</el-button>
         <el-button type="primary" @click="submitOne">下一步</el-button>
@@ -47,12 +52,17 @@
         <el-form-item
           label="初始种群设置（输入时保留方括号，示例：[1,3,5,6,7]）"
         >
-          <el-table :data="tableDataTwo" style="width: 100%">
+          <el-table :data="tableDataTwo" style="width: 100%" height="250px">
             <el-table-column prop="obj" label="项目" width="400px">
             </el-table-column>
           </el-table>
         </el-form-item>
       </el-form>
+      <div style="width: 100%;margin-left: 90px;">
+        <el-button>从文件载入初始种群</el-button>
+        <el-button>添加个体</el-button>
+        <el-button>删除选中个体</el-button>
+      </div>
       <span slot="footer" class="dialog-footer">
         <el-button @click="visibleTwo = false">取 消</el-button>
         <el-button type="primary" @click="sumbitTwo">确 认</el-button>
@@ -78,11 +88,31 @@ export default {
         { obj: "['',14,12]" },
         { obj: "['',17,11]" },
         { obj: "['',21,-15,-13]" },
+        { obj: "['',21,-15,-13]" },
+        { obj: "['',21,-15,-13]" },
+        { obj: "['',21,-15,-13]" },
+        { obj: "['',21,-15,-13]" },
+        { obj: "['',21,-15,-13]" },
+        { obj: "['',21,-15,-13]" },
+        { obj: "['',21,-15,-13]" },
+        { obj: "['',21,-15,-13]" },
+        { obj: "['',21,-15,-13]" },
       ],
       tableDataTwo: [
         { obj: "1 [1,2,2,2,4]" },
-        { obj: "1 [1,5,6,7,3]" },
-        { obj: "1 [1,5,6,12,7, 3]" },
+        { obj: "2 [1,5,6,7,3]" },
+        { obj: "3 [1,5,6,12,7,3]" },
+        { obj: "4 [1,2,4,6,8]" },
+        { obj: "5 [1,4,4,6]" },
+        { obj: "6 [1,3,15,4,2,2]" },
+        { obj: "7 [1,5,6,12,7,3]" },
+        { obj: "8 [1,5,6,12,7,3]" },
+        { obj: "9 [1,5,6,12,7,3]" },
+        { obj: "10 [1,5,6,12,7,3]" },
+        { obj: "11 [1,5,6,12,7,3]" },
+        { obj: "12 [1,5,6,12,7,3]" },
+        { obj: "13 [1,5,6,12,7,3]" },
+        { obj: "14 [1,5,6,12,7,3]" },
       ],
     };
   },

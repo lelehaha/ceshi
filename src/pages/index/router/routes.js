@@ -18,6 +18,14 @@ function Oneone() {
 function Onetwo() {
   return import("../views/onetwo/index.vue")
 }
+// 一三
+function Onethree() {
+  return import('../views/onethree/index.vue')
+}
+// 一四
+function Onefour() {
+  return import('../views/onefour/index.vue')
+}
 // 首
 function Home() {
   return import("../views/home/index.vue")
@@ -59,6 +67,16 @@ export default [
     name: "一二",
     path: "/onetwo",
     component: Onetwo,
+  },
+  {
+    name: "一三",
+    path: "/onethree",
+    component: Onethree,
+  },
+  {
+    name: "一四",
+    path: "/onefour",
+    component: Onefour,
   },
   {
     name: '首',

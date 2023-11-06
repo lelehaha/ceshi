@@ -29,12 +29,15 @@
     <el-dialog title="EFSM模型" :visible.sync="dialogVisible" width="60%">
       <el-form ref="form" :model="formData" label-width="80px">
         <el-form-item label="基本变更">
-          <el-table :data="tableData" style="width: 100%">
+          <el-table :data="tableData" style="width: 100%" height="250px">
             <el-table-column prop="index" label="项目" align="center">
             </el-table-column>
           </el-table>
         </el-form-item>
       </el-form>
+      <div class="btn" style="width: 100%;margin-left: 210px;">
+        <el-button>从文件载入基本变更</el-button>
+      </div>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">取 消</el-button>
         <el-button type="primary" @click="submit"
@@ -60,6 +63,13 @@ export default {
         { index: "1 [20,21]" },
         { index: "2 [10,18]" },
         { index: "3 [14,15,17,19]" },
+        { index: "4 [21,10,13,23]" },
+        { index: "5 [14,15,17,19]" },
+        { index: "6 [14,15,17,19]" },
+        { index: "7 [14,15,17,19]" },
+        { index: "8 [14,15,17,19]" },
+        { index: "9 [14,15,17,19]" },
+        { index: "10 [14,15,17,19]" },
       ],
     };
   },
@@ -104,5 +114,8 @@ export default {
   width: 20%;
   height: inherit;
   background-color: #fff;
+}
+.btn .el-button {
+  padding: 12px 120px;
 }
 </style>
